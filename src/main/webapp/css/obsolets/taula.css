@@ -1,0 +1,37 @@
+tr {
+    font-family:verdana,arial;
+    font-size:10pt;
+}
+
+.estilTaula{
+    background-color:#CCFFFF;
+    border-style:solid;
+    border-color:#CCFFFF;
+    border-width:1px;
+}
+
+.estilFila{
+    background-color:#99CCFF;
+    color:#333333;
+    font-weight:bold;
+    font-size:10pt;
+}
+
+.estilFilaSeleccionada{
+    background-color:#FFFF00;
+    color:#333333;
+    font-weight:bold;
+    font-size:10pt;
+}
+
+td {
+    font-family:verdana,arial;
+    font-size:10pt;
+}
+
+.estilCela{
+    background-color:#99CCFF;
+    color:#333333;
+    font-weight:bold;
+    font-size:10pt;
+}

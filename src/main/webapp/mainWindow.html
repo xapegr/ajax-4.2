@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="pharmacyApp" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Pharmacy Company</title>
+
+        <link rel="shortcut icon" href="images/logo.jpeg"/>
+        <!-- css-->
+        <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <!-- jQuery-->
+        <script src="vendors/jquery/js/jQuery.js" type="text/javascript" xml:space="preserve"></script>
+
+        <!-- jQuery Cookies management-->
+        <script src="vendors/jquery/jquery-cookie/jquery.cookie.js" type="text/javascript" xml:space="preserve"></script>
+
+        <!-- Angular-->
+        <script src="vendors/angular/js/angular.min.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/angular/js/angular-file-upload.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/angular/js/angular-i18n/angular-locale_es-es.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/angular/js/ng-currency.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/angular/js/angular-cookies.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/angular/js/dirPagination.js" type="text/javascript" xml:space="preserve"></script>
+        <script src="vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.js" type="text/javascript" xml:space="preserve"></script>
+
+        <!-- Own code-->
+        <script type="text/javascript" src="js/model/User.js"></script>
+        <script type="text/javascript" src="js/model/Product.js"></script>
+        <script type="text/javascript" src="js/model/Purchase.js"></script>
+        <script src="js/app.js" type="text/javascript" xml:space="preserve"></script>
+        <script type="text/javascript" src="js/controller/SessionController.js" ></script>
+        <script type="text/javascript" src="js/controller/UserController.js" ></script>
+        <script type="text/javascript" src="js/controller/PurchaseController.js" ></script>
+        <script type="text/javascript" src="js/controller/ProductController.js" ></script>
+    </head>
+    <body class="documentColor" ng-controller="SessionController as sessionCtrl" ng-init="userAction = 1; sessionCtrl.sessionControl()">
+        <div ng-controller="ProductController as productCtrl" ng-init="productCtrl.loadProducts()">
+            <div ng-controller="PurchaseController as purchaseCtrl">
+                <div ng-show="userType==0">
+                    <a ng-click="showForm=2">Products management</a>
+                    <a ng-click="showForm=3">Purchase management</a>
+                    <div ng-show="showForm==2" id="productForm">
+                        <product-management></product-management>
+                    </div>
+                    <div ng-show="showForm==3" id="purchaseMangForm">
+                        <purchase-management-real></purchase-management-real>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="userType==1">
+                <a href="#" ng-click="showForm=1">Purchase a product</a>
+                <div id="purchaseForm" ng-show="showForm==1">
+                    <purchase-management></purchase-management>
+                </div>
+            </div>
+        </div>
+        <input type="button" ng-click="sessionCtrl.logOut()" value="logout"/>
+    </body>
+</html>

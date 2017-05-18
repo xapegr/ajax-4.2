@@ -1,0 +1,30 @@
+<form class="login2" name="productManagement" ng-submit="purchaseCtrl.addProduct()" novalidate>
+    <h2>Add a product</h2>
+    <div class="container well">
+        <div class="form-horizontal" >
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="formGroup">Name of product *</label>
+                <div class="col-sm-4">
+                    <input type="text" id="productName" ng-model="product.name"/>
+                </div>
+                <label class="col-sm-2 control-label" for="formGroup">Price *</label>
+                <div class="col-sm-4">
+                    <input type="number" id="productPrice" ng-model="product.price"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="formGroup"></label>
+                <div class="col-sm-4">
+                    <button ng-disabled="purchaseManagement.$invalid" class="btn btn-success">
+                        Create product
+                    </button>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>
+                        <input class="btn btn-default btn-primary btn-block" type="submit" value="Back" ng-click=""><!--Show para ocultar la template-->
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

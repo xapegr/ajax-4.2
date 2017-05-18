@@ -1,0 +1,57 @@
+.llista {
+	border: 1px Solid #84AA00;
+	background: white;
+	background-repeat: no-repeat;
+	padding: 1px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.llista:hover {
+	background: yellow;
+}
+
+.opcio {
+	border: 1px Solid #84AA00;
+	padding: 1px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.radis{
+border:solid 2px #FFFFFF;
+cursor:pointer;
+padding:3px 0px 3px 0px;
+}
+
+.checkbox{
+border:solid 2px #FFFFFF;
+cursor:pointer;
+padding:3px 0px 3px 0px;
+}
+
+.camp {
+	border: 1px Solid #84AA00;
+	background: white;
+	background-repeat: no-repeat;
+	padding: 2px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.camp:hover {
+	background: yellow;
+}
+
+.camp:focus {
+	background: yellow;
+}
+
+#button {
+	width: 140px;
+	height: 40px;
+	margin-right: 80px;
+	border: 1px Solid #84AA00;
+	background-image: url(button.gif);
+	background-repeat: no-repeat;
+}
